@@ -21,7 +21,7 @@ export const quoteReducer= (state = initialState, action) => {
         case 'FETCHING_QUOTE_FAILURE':
             return{
                 ...state,
-                error: alert("Sorry. Couldn't get quote.")
+                error: "Sorry. Couldn't get quote."
             }
         default:
             return state

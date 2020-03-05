@@ -1,9 +1,13 @@
 import React from 'react'
 
+import './QuoteInfo.scss';
+
 export default function QuoteInfo({quote}) {
+
+
     return (
-        <div>
-            <p>{quote}</p>
+        <div className='quoteInfo-container'>
+            <p>" {quote} "</p>
         </div>
     )
 }

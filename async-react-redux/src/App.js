@@ -11,7 +11,7 @@ function App({quote, isFetching, error, getQuote}) {
   return (
     <div className="App">
       <h1>Ron Swanson Quotes</h1>
-      <Quote quote={quote} getQuote={getQuote} isFetching={isFetching} />
+      <Quote quote={quote} getQuote={getQuote} error={error} isFetching={isFetching} />
     </div>
   );
 }

@@ -2,14 +2,22 @@ import React from 'react'
 import Loader from 'react-loader-spinner';
 
 import QuoteInfo from './QuoteInfo';
+import './Quote.scss';
 
-export default function Quote({quote, isFetching, getQuote}) {
+export default function Quote({quote, isFetching, getQuote, error}) {
+
+    if (error) {
+        return alert({error})
+    }
+
     return (
-        <div>
+        <div className='quote-container'>
             {/* if there is no quote 
             and there is not fetching state === <h2> */}
             
-            {!quote && !isFetching && <h2>Fetch a Ron Swon Quote</h2> }
+            <div className='fetch'>
+                {!quote && !isFetching && <h2>Quote?</h2> }
+            </div>
 
             {/* if there is fetching show this loader animation */}
             {isFetching && 
